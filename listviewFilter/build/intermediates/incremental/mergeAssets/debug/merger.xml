@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="21.0.2" >
+        <source path="C:\Users\Oo\AndroidStudioProjects\DoctorMBG\listviewFilter\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="C:\Users\Oo\AndroidStudioProjects\DoctorMBG\listviewFilter\src\main\assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\Oo\AndroidStudioProjects\DoctorMBG\listviewFilter\src\debug\assets" />
+    </dataSet>
+
+</merger>

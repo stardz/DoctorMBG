@@ -1,2 +1,1 @@
-include ':app', ':demo', ':library', ':AndroidBootstrap', ':MaterialTabsModule', ':ProgressWheel'
-include ':listviewFilter'
+include ':app', ':demo', ':library', ':AndroidBootstrap', ':ProgressWheel'

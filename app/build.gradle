@@ -26,7 +26,5 @@ dependencies {
     compile project(':AndroidBootstrap')
     compile project(':demo')
     compile project(':library')
-    compile project(':listviewFilter')
-    compile project(':MaterialTabsModule')
     compile project(':ProgressWheel')
 }

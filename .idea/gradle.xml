@@ -9,12 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AndroidBootstrap" />
-            <option value="$PROJECT_DIR$/MaterialTabsModule" />
             <option value="$PROJECT_DIR$/ProgressWheel" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/demo" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/listviewFilter" />
           </set>
         </option>
       </GradleProjectSettings>

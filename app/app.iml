@@ -59,17 +59,15 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="mpandroidchartlibrary-1-7-4" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-21.0.0" level="project" />
     <orderEntry type="module" module-name="AndroidBootstrap" exported="" />
     <orderEntry type="module" module-name="ProgressWheel" exported="" />
     <orderEntry type="module" module-name="library" exported="" />
     <orderEntry type="module" module-name="demo" exported="" />
-    <orderEntry type="module" module-name="listviewFilter" exported="" />
-    <orderEntry type="module" module-name="MaterialTabsModule" exported="" />
   </component>
 </module>
 
