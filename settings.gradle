@@ -1,1 +1,1 @@
-include ':app', ':demo', ':library', ':AndroidBootstrap', ':ProgressWheel'
+include ':app', ':AndroidBootstrap'
