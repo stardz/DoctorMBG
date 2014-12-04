@@ -24,4 +24,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/mpandroidchartlibrary-1-7-4.jar')
     compile project(':AndroidBootstrap')
+    compile files('libs/android-support-v4.jar')
 }
