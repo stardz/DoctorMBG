@@ -7,8 +7,7 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* .gitignore
-* ListviewFilter.iml
+* MaterialDesign.iml
 * proguard-project.txt
 
 Replaced Jars with Dependencies:
@@ -22,20 +21,18 @@ dependency we picked, which could render the project not compileable.
 You can disable the jar replacement in the import wizard and try again:
 
 android-support-v4.jar => com.android.support:support-v4:+
-android-support-v4.jar => com.android.support:support-v4:+
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => listviewFilter\src\main\AndroidManifest.xml
-* lint.xml => listviewFilter\lint.xml
-* res\ => listviewFilter\src\main\res\
-* src\ => listviewFilter\src\main\java\
-* C:\Users\Oo\AndroidStudioProjects\ListviewFilter\ListViewFilterTest\libs\android-support-v4.jar => listviewFilter\libs\android-support-v4.jar
-* C:\Users\Oo\AndroidStudioProjects\ListviewFilter\ListViewFilterTest\res\ => listviewFilter\src\androidTest\res\
-* C:\Users\Oo\AndroidStudioProjects\ListviewFilter\ListViewFilterTest\src\ => listviewFilter\src\androidTest\java\
+* AndroidManifest.xml => materialDesign\src\main\AndroidManifest.xml
+* assets\ => materialDesign\src\main\assets\
+* libs\nineoldandroids-2.4.0.jar => materialDesign\libs\nineoldandroids-2.4.0.jar
+* lint.xml => materialDesign\lint.xml
+* res\ => materialDesign\src\main\res\
+* src\ => materialDesign\src\main\java\
 
 Missing Android Support Repository:
 -----------------------------------
