@@ -50,15 +50,15 @@ public class MaiSuivi extends FragmentActivity implements ActionBar.TabListener 
     private void addTabs(ActionBar actionBar)
     {
         ActionBar.Tab tab1=actionBar.newTab();
-        tab1.setText("Tab 1");
+        tab1.setText("Information");
         tab1.setTabListener(this);
 
         ActionBar.Tab tab2=actionBar.newTab();
-        tab2.setText("Tab 2");
+        tab2.setText("Suivi");
         tab2.setTabListener(this);
 
         ActionBar.Tab tab3=actionBar.newTab();
-        tab3.setText("Tab 3");
+        tab3.setText("Gestion des visites");
         tab3.setTabListener(this);
 
         actionBar.addTab(tab1);
