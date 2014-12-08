@@ -102,13 +102,15 @@
                 android:layout_height="fill_parent"
                 android:text="Woman"
                 bootstrap:bb_type="success"
-                android:layout_weight="20"/>
+                android:layout_weight="20"
+                android:id="@+id/womBtn"/>
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:text="Child"
                 bootstrap:bb_type="default"
-                android:layout_weight="20"/>
+                android:layout_weight="20"
+                android:id="@+id/childBtn"/>
 
 
             </LinearLayout>

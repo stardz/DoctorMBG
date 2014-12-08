@@ -50,15 +50,15 @@ public class MaiStats extends FragmentActivity implements ActionBar.TabListener 
     private void addTabs(ActionBar actionBar)
     {
         ActionBar.Tab tab1=actionBar.newTab();
-        tab1.setText(" Etude des Indicateurs");
+        tab1.setText("Parameters study");
         tab1.setTabListener(this);
 
         ActionBar.Tab tab2=actionBar.newTab();
-        tab2.setText("Etude Comparatives");
+        tab2.setText("Crossing parameters");
         tab2.setTabListener(this);
 
         ActionBar.Tab tab3=actionBar.newTab();
-        tab3.setText("Statistiques ");
+        tab3.setText("Stats of a parameter ");
         tab3.setTabListener(this);
 
         actionBar.addTab(tab1);
