@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#FFFF00">
+    >
 
     <LinearLayout
         android:orientation="horizontal"
@@ -19,7 +19,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView_icon"
-                android:src="@drawable/ic_launcher"
+                android:src="@drawable/ic_user"
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
             />
@@ -41,16 +41,30 @@
                 android:lineSpacingExtra="@dimen/padding_medium"/>
         </LinearLayout>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/discussion"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:background="@drawable/border_raduis"
+            android:layout_margin="5dp">
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/discussion"
+                android:layout_weight="1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"></RelativeLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
