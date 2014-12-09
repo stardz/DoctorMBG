@@ -61,7 +61,44 @@
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="120dp"></RelativeLayout>
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText2"
+                        android:layout_gravity="center"
+                        android:layout_weight="15"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="send"
+                            android:layout_weight="1"
+                            android:id="@+id/button" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="attach"
+                            android:layout_weight="1"
+                            android:id="@+id/button2" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
 
