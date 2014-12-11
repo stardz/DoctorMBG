@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#ffcdf5ff">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto">
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -28,29 +31,44 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="20dp"
-            android:gravity="center">
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView22"
+                android:layout_weight="22"
+                android:layout_gravity="center"/>
+
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton"/>
+                android:id="@+id/imageButton"
+                android:src="@drawable/ic_action_previous_item"
+                android:layout_weight="1"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15/11/2014"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView2" />
+                android:id="@+id/textView2"
+                android:layout_weight="5"
+                android:layout_gravity="center"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton2"
-                android:backgroundTintMode="multiply"/>
+                android:id="@+id/imageButton"
+                android:src="@drawable/ic_action_next_item"
+                android:layout_weight="1"/>
 
         </LinearLayout>
 

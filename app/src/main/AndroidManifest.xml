@@ -18,11 +18,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MaiSuivi"
+            android:name=".MaiStats"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".MaiStats"
+            android:name=".MaiSuivi"
             android:label="@string/app_name" >
         </activity>
         <activity
