@@ -14,7 +14,137 @@
   limitations under the License.
   -->
 
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/pager"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ebm="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapthumbnail="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:background="@drawable/tracking">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="250dp"
+        android:layout_marginLeft="250dp"
+        android:background="#40FFFFFF">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15">
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Stats"
+                bootstrap:bb_type="success"
+                android:layout_weight="20"
+                android:id="@+id/statsbtn"/>
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Track"
+                bootstrap:bb_type="default"
+                android:layout_weight="20"
+                android:id="@+id/trackbtn"/>
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="About US"
+                bootstrap:bb_type="default"
+                android:layout_weight="20"
+                android:id="@+id/aboutbtn"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:weightSum="1">
+            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+                android:id="@+id/thumbnailTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bootstrapthumbnail:bt_width="300dp"
+                bootstrapthumbnail:bt_height="300dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.4"
+                ebm:bt_image="@drawable/doctor2" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+
+                android:layout_weight="0.6"
+                android:gravity="center_vertical">
+
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/txtOne"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:hint="User name"
+                    android:gravity="center"
+                    android:layout_weight="0.22" />
+                <com.beardedhen.androidbootstrap.BootstrapEditText
+                    android:id="@+id/txtOne"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="10dp"
+                    android:hint="Password"
+                    android:gravity="center"
+                    android:layout_weight="0.22" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=" Forget password ?"
+                        android:id="@+id/textView" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15">
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Remember Me"
+                android:id="@+id/checkBox"
+                android:layout_weight="50"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Login"
+                bootstrap:bb_type="primary"
+                android:layout_weight="50"
+                android:id="@+id/login"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

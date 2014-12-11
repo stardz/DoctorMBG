@@ -7,7 +7,10 @@
     <string name="title_activity_suivi">Suivi</string>
     <string name="title_activity_stats">Stats</string>
     <string name="title_activity_suivi_patients">SuiviPatients</string>
-    <string name="demo_collection" />
+    <string name="demo_collection"></string>
     <string name="dummy_section_text">Test</string>
+    <string name="title_activity_mai_about">MaiAbout</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

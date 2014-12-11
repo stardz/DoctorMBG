@@ -60,15 +60,70 @@
 
         </LinearLayout>
 
-        <FrameLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:id="@+id/linearLayout"
             android:layout_weight="80">
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/chart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="80">
+                <com.github.mikephil.charting.charts.ScatterChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar1"
+                    android:layout_weight="80" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/tvXMax"
+                    android:layout_weight="20" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar2"
+                    android:layout_weight="80" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/tvYMax"
+                    android:layout_weight="20" />
+            </LinearLayout>
+        </LinearLayout>
+
 
         <LinearLayout
             android:orientation="horizontal"
@@ -80,13 +135,15 @@
                 android:layout_height="fill_parent"
                 android:text="Woman"
                 bootstrap:bb_type="success"
-                android:layout_weight="20"/>
+                android:layout_weight="20"
+                android:id="@+id/womBtn"/>
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:text="Child"
                 bootstrap:bb_type="default"
-                android:layout_weight="20"/>
+                android:layout_weight="20"
+                android:id="@+id/childBtn"/>
 
 
         </LinearLayout>
