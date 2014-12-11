@@ -73,7 +73,7 @@ class MyListItem {
         View rowView = inflater.inflate(R.layout.element_disscusion, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.firstLine);
         TextView textView2 = (TextView) rowView.findViewById(R.id.secondLine);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon_dis);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.login); //
         textView.setText(values.get(position).name);
         textView2.setText(values.get(position).text);
         imageView.setImageResource(values.get(position).drawable);
