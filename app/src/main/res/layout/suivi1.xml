@@ -61,12 +61,12 @@
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="120dp">
+                android:layout_height="90dp">
 
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
+                    android:layout_height="90dp">
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -81,19 +81,21 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center">
 
-                        <Button
+                        <ImageButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="send"
+                            android:src="@drawable/send121"
                             android:layout_weight="1"
-                            android:id="@+id/button" />
+                            android:id="@+id/button"
+                            android:background="@color/white"/>
 
-                        <Button
+                        <ImageButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="attach"
+                            android:src="@drawable/attachment71"
                             android:layout_weight="1"
-                            android:id="@+id/button2" />
+                            android:id="@+id/button2"
+                            android:background="@color/white"/>
                     </LinearLayout>
 
                 </LinearLayout>

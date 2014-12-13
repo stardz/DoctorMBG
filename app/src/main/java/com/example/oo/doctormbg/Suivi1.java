@@ -3,6 +3,7 @@ package com.example.oo.doctormbg;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.*;
 import android.view.ViewGroup;
@@ -32,12 +33,13 @@ public class Suivi1 extends Fragment {
                     "date debut : "+"15/11/2014");
         ListView lv = (ListView) v.findViewById(R.id.discussion);
         ArrayList<MyListItem> list = new ArrayList<MyListItem>();
-        list.add(new MyListItem(1,"Belkadi Zohra","pourquoi ......... ",R.drawable.ic_user));
+        list.add(new MyListItem(1,"Belkadi Zohra","pourquoi .............. ........................... ......... v v vv v v v .................. ......... ......... .................. ......... ......... ",R.drawable.ic_user));
         list.add(new MyListItem(2,"Belkadi Zohra","pourquoi ......... ",R.drawable.ic_user));
         list.add(new MyListItem(3,"Dr. Hawas Salah","il faut  ......... ",R.drawable.ic_user));
-
+        Log.d("debugging", list.toString());
         final MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(getActivity(), list);
         lv.setAdapter(adapter);
+        adapter.add(new MyListItem(3,"Dr. Hawas Salah","il faut  ......... ",R.drawable.ic_user));
         return v;
     }
 }
@@ -68,15 +70,21 @@ class MyListItem {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.d("debugging", values.toString());
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.element_disscusion, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.firstLine);
         TextView textView2 = (TextView) rowView.findViewById(R.id.secondLine);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.login); //
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
         textView.setText(values.get(position).name);
         textView2.setText(values.get(position).text);
         imageView.setImageResource(values.get(position).drawable);
+        Log.d("debugging", position + "  " );
         return rowView;
+    }
+
+    public void add(MyListItem mli) {
+        this.values.add(mli);
     }
 }
