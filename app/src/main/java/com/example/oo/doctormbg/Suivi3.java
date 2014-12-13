@@ -22,13 +22,7 @@ public class Suivi3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //return inflater.inflate(R.layout.suivi3,container,false);
         View v =inflater.inflate(R.layout.suivi3,container,false);
-        TextView tv = (TextView) v.findViewById(R.id.textView_info);
-        tv.setText( "Nom : "+"Belkadi\n"+
-                "Prenom : "+" Zohra\n"+
-                "Date de naissance : "+"12/11/1979\n"+
-                "NSS : "+"1565152757\n"+
-                "date debut : "+"15/11/2014");
-        ListView lv = (ListView) v.findViewById(R.id.discussion);
+        ListView lv = (ListView) v.findViewById(R.id.visite_resultat);
         ArrayList<MyResultItem> list = new ArrayList<MyResultItem>();
         list.add(new MyResultItem(1,"CHL","0.5",true));
         list.add(new MyResultItem(2,"ADN","0.5",false));
@@ -39,7 +33,6 @@ public class Suivi3 extends Fragment {
         return v;
     }
 }
-
 
 class MyResultItem {
     int id;
@@ -52,9 +45,9 @@ class MyResultItem {
         this.item = item;
         this.text = text;
         if(good) {
-            this.drawable=R.drawable.ic_launcher;
+            this.drawable=R.drawable.check521;
         } else {
-            this.drawable=R.drawable.ic_launcher;
+            this.drawable=R.drawable.close47;
         }
 
     }

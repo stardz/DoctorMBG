@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="50dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/ic_launcher"/>
+        android:src="@drawable/add186"/>
 
     <ListView
         android:layout_width="wrap_content"
@@ -52,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton"
                 android:src="@drawable/ic_action_previous_item"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -68,7 +69,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton"
                 android:src="@drawable/ic_action_next_item"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="@color/white"/>
 
         </LinearLayout>
 
