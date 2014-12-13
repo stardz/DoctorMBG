@@ -3,6 +3,8 @@ package com.example.oo.doctormbg;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -20,6 +22,10 @@ public class MaiStats extends FragmentActivity implements ActionBar.TabListener 
         setContentView(R.layout.main_stats);
         viewPager= (ViewPager) findViewById(R.id.pager);
         final ActionBar actionBar=getActionBar();
+        if (actionBar != null) {
+            actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2962FF")));
+
+        }
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         addTabs(actionBar);
         viewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
@@ -51,6 +57,7 @@ public class MaiStats extends FragmentActivity implements ActionBar.TabListener 
     {
         ActionBar.Tab tab1=actionBar.newTab();
         tab1.setText("Parameters study");
+
         tab1.setTabListener(this);
 
         ActionBar.Tab tab2=actionBar.newTab();

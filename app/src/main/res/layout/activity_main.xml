@@ -22,7 +22,7 @@
     xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
     xmlns:bootstrapthumbnail="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentLayout"
-    android:background="@drawable/tracking">
+    android:background="@drawable/research">
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,7 +32,7 @@
         android:layout_marginBottom="100dp"
         android:layout_marginRight="250dp"
         android:layout_marginLeft="250dp"
-        android:background="#40FFFFFF">
+        android:background="#5003A9F4">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -115,7 +115,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text=" Forget password ?"
-                        android:id="@+id/textView" />
+                        android:id="@+id/textView"
+                        android:enabled="true" />
                 </FrameLayout>
 
             </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.oo.doctormbg;
 
+import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
@@ -22,6 +24,7 @@ import com.github.mikephil.charting.utils.XLabels;
 import com.github.mikephil.charting.utils.YLabels;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by Vivz on 10/25/13.
@@ -35,11 +38,18 @@ public class Stats2 extends Fragment implements SeekBar.OnSeekBarChangeListener,
         View v= inflater.inflate(R.layout.stats2,container,false);
         final BootstrapButton btnMom= (BootstrapButton)v.findViewById(R.id.womBtn);
         final BootstrapButton btnChi=(BootstrapButton)v.findViewById(R.id.childBtn);
+        final Spinner param1=(Spinner)v.findViewById(R.id.spinner);
+        final Spinner param2=(Spinner)v.findViewById(R.id.spinner2);
+        final Activity contexte=getActivity();
+        G.fillSpinner(param1,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
+        G.fillSpinner(param2,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
         btnChi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnMom.setBootstrapType("default");
                 btnChi.setBootstrapType("success");
+                G.fillSpinner(param1,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
+                G.fillSpinner(param2,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
             }
         });
         btnMom.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +57,8 @@ public class Stats2 extends Fragment implements SeekBar.OnSeekBarChangeListener,
             public void onClick(View view) {
                 btnChi.setBootstrapType("default");
                 btnMom.setBootstrapType("success");
+                G.fillSpinner(param1,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
+                G.fillSpinner(param2,new ArrayList(Arrays.asList("item1", "item2", "item3")),contexte);
             }
         });
         /*

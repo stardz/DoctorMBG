@@ -39,6 +39,9 @@ public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener 
         final Spinner debut=(Spinner)v.findViewById(R.id.spinner2);
         final Spinner fin=(Spinner)v.findViewById(R.id.spinner3);
         final Activity contexte=getActivity();
+        G.fillSpinner(param,new ArrayList(Arrays.asList("item1","item2","item3")),contexte);
+        G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
+        G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
         btnChi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

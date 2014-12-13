@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
 
@@ -16,6 +17,7 @@ public class Main extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final RelativeLayout rLay=(RelativeLayout)findViewById(R.id.parentLayout);
         final BootstrapButton statsBtn=(BootstrapButton)findViewById(R.id.statsbtn);
         final BootstrapButton aboutBtn=(BootstrapButton)findViewById(R.id.aboutbtn);
         final BootstrapButton trackBtn=(BootstrapButton)findViewById(R.id.trackbtn);
@@ -27,6 +29,7 @@ public class Main extends Activity {
                 trackBtn.setBootstrapType("default");
                 statsBtn.setBootstrapType("success");
                 Main.this.choice=1;
+                rLay.setBackgroundResource(R.drawable.research);
             }
         });
         aboutBtn.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +39,7 @@ public class Main extends Activity {
                 trackBtn.setBootstrapType("default");
                 aboutBtn.setBootstrapType("success");
                 Main.this.choice=3;
+                rLay.setBackgroundResource(R.drawable.us);
             }
         });
         trackBtn.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +49,7 @@ public class Main extends Activity {
                 statsBtn.setBootstrapType("default");
                 trackBtn.setBootstrapType("success");
                 Main.this.choice=2;
+                rLay.setBackgroundResource(R.drawable.tracking);
             }
         });
         loginBtn.setOnClickListener(new View.OnClickListener() {
