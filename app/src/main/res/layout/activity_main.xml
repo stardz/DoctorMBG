@@ -101,7 +101,8 @@
                     android:layout_margin="10dp"
                     android:hint="Password"
                     android:gravity="center"
-                    android:layout_weight="0.22" />
+                    android:layout_weight="0.22"
+                    android:password="true" />
 
                 <FrameLayout
                     android:layout_width="fill_parent"
