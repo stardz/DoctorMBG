@@ -178,7 +178,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/visite_resultat"
                 android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"/>
+                android:layout_marginRight="100dp"
+               android:layout_marginTop="20dp"/>
         </TableLayout>
 
     </LinearLayout>

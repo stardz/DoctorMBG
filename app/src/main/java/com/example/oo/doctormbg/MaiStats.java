@@ -24,9 +24,6 @@ public class MaiStats extends FragmentActivity implements ActionBar.TabListener 
         setContentView(R.layout.main_stats);
         viewPager= (ViewPager) findViewById(R.id.pager);
         final ActionBar actionBar=getActionBar();
-        if (actionBar != null) {
-            actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2962FF")));
-        }
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         addTabs(actionBar);
         viewPager.setAdapter(new MyAdapter(getSupportFragmentManager()));

@@ -20,7 +20,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_weight="15"
             android:padding="8dp">
 
             <TextView
@@ -72,10 +72,11 @@
                 android:layout_weight="12.5"
                 android:gravity="center_vertical" />
             <com.beardedhen.androidbootstrap.BootstrapButton
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Success"
+                android:text="Validate"
                 android:id="@+id/valBtn"
+                android:layout_gravity="center"
                 bootstrap:bb_icon_right="fa-android"
                 bootstrap:bb_type="success"
                 android:layout_weight="8" />
