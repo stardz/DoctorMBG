@@ -1,96 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:weightSum="23">
+        android:weightSum="0">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="100dp">
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="0dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/frameLayout"
+                android:layout_weight="10" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Suivi de l'evolution de :"
+                android:text="Evolution of the parameter :"
                 android:id="@+id/textView"
                 android:gravity="center"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginRight="10dp"/>
+                android:layout_weight="40" />
 
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner" />
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/spinner"
+                android:layout_weight="20"
+                android:layout_margin="5dp" />
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:text="Validate"
+                    android:id="@+id/valBtn"
+                    bootstrap:bb_icon_right="fa-android"
+                    bootstrap:bb_type="success"
+                    android:layout_weight="20"
+                    android:layout_margin="10dp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/frameLayout2"
+                android:layout_weight="10" />
+
+
         </LinearLayout>
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Titre du graph"
-            android:id="@+id/graphTitle"
-            android:gravity="center"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_weight="1"
-            android:layout_marginBottom="20dp"
-            />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:src="@drawable/ic_launcher"
-            android:layout_weight="20"/>
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginBottom="10dp">
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center_vertical">
 
             <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
                 android:text="Afficher la moyenne"
                 android:id="@+id/checkBox"
                 android:textSize="20dp"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Taille du graph :"
-                android:id="@+id/textView"
-                android:gravity="right"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_weight="1"
-                android:layout_gravity="center"/>
-            <SeekBar
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/seekBar" />
+                android:layout_weight="30" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Graph size :"
+                android:id="@+id/textView"
+                android:layout_weight="20"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="26dp"
+                android:textIsSelectable="false" />
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_weight="50" />
         </LinearLayout>
     </LinearLayout>
 
