@@ -28,8 +28,7 @@ import java.util.Arrays;
 /**
  * Created by Vivz on 10/25/13.
  */
-public class Stats3 extends Fragment implements SeekBar.OnSeekBarChangeListener,
-        OnChartValueSelectedListener {
+public class Stats3 extends Fragment implements  OnChartValueSelectedListener {
     private PieChart mChart;
     private SeekBar mSeekBarX, mSeekBarY;
     private TextView tvX, tvY;
@@ -49,7 +48,7 @@ public class Stats3 extends Fragment implements SeekBar.OnSeekBarChangeListener,
         View v= inflater.inflate(R.layout.stats3,container,false);
         final BootstrapButton btnMom= (BootstrapButton)v.findViewById(R.id.womBtn);
         final BootstrapButton btnChi=(BootstrapButton)v.findViewById(R.id.childBtn);
-
+        final BootstrapButton btnVal=(BootstrapButton)v.findViewById(R.id.valBtn);
 
         final Spinner param1=(Spinner)v.findViewById(R.id.spinner);
         final Spinner param2=(Spinner)v.findViewById(R.id.spinner2);
@@ -77,16 +76,7 @@ public class Stats3 extends Fragment implements SeekBar.OnSeekBarChangeListener,
         /*
         Pie chart
          */
-        tvX = (TextView) v.findViewById(R.id.tvXMax);
-        tvY = (TextView) v.findViewById(R.id.tvYMax);
 
-        mSeekBarX = (SeekBar) v.findViewById(R.id.seekBar1);
-        mSeekBarY = (SeekBar) v.findViewById(R.id.seekBar2);
-
-        mSeekBarY.setProgress(10);
-
-        mSeekBarX.setOnSeekBarChangeListener(this);
-        mSeekBarY.setOnSeekBarChangeListener(this);
 
         mChart = (PieChart) v.findViewById(R.id.chart1);
 
@@ -125,25 +115,29 @@ public class Stats3 extends Fragment implements SeekBar.OnSeekBarChangeListener,
         // mChart.setTouchEnabled(false);
 
         mChart.setCenterText("MPAndroidChart\nLibrary");
+        btnVal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setData(3, 100);
 
-        setData(3, 100);
+                mChart.animateXY(1500, 1500);
+                // mChart.spin(2000, 0, 360);
 
-        mChart.animateXY(1500, 1500);
-        // mChart.spin(2000, 0, 360);
+                Legend l = mChart.getLegend();
+                l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
+                l.setXEntrySpace(7f);
+                l.setYEntrySpace(5f);
+            }
+        });
 
-        Legend l = mChart.getLegend();
-        l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-        l.setXEntrySpace(7f);
-        l.setYEntrySpace(5f);
         return v;
     }
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+    public void onChanged() {
 
-        tvX.setText("" + (mSeekBarX.getProgress() + 1));
-        tvY.setText("" + (mSeekBarY.getProgress()));
+        tvX.setText("" + (50 + 1));
+        tvY.setText("" + (50));
 
-        setData(mSeekBarX.getProgress(), mSeekBarY.getProgress());
+        setData(50,50);
     }
 
     private void setData(int count, float range) {
@@ -215,15 +209,5 @@ public class Stats3 extends Fragment implements SeekBar.OnSeekBarChangeListener,
         Log.i("PieChart", "nothing selected");
     }
 
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-        // TODO Auto-generated method stub
 
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-        // TODO Auto-generated method stub
-
-    }
 }

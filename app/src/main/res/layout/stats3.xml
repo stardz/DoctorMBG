@@ -64,7 +64,8 @@
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Success"
+                android:text="Validate"
+                android:id="@+id/valBtn"
                 bootstrap:bb_icon_right="fa-android"
                 bootstrap:bb_type="success"
                 android:layout_weight="10" />
@@ -89,51 +90,6 @@
                     android:layout_height="match_parent" />
             </FrameLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp">
-
-                <SeekBar
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/seekBar1"
-                    android:layout_weight="80" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Large Text"
-                    android:id="@+id/tvXMax"
-                    android:layout_weight="20" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp">
-
-                <SeekBar
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/seekBar2"
-                    android:layout_weight="80" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Large Text"
-                    android:id="@+id/tvYMax"
-                    android:layout_weight="20" />
-            </LinearLayout>
         </LinearLayout>
 
 

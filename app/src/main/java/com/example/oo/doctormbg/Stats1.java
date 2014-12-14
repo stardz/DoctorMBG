@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * Created by Vivz on 10/25/13.
  */
-public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener {
+public class Stats1 extends Fragment /*implements SeekBar.OnSeekBarChangeListener*/ {
     private LineChart mChart;
     private SeekBar mSeekBarX, mSeekBarY;
     private TextView tvX, tvY;
@@ -35,6 +35,7 @@ public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener 
         View v=inflater.inflate(R.layout.stats1,container,false);
         final BootstrapButton btnMom= (BootstrapButton)v.findViewById(R.id.womBtn);
         final BootstrapButton btnChi=(BootstrapButton)v.findViewById(R.id.childBtn);
+        final BootstrapButton btnLog=(BootstrapButton)v.findViewById(R.id.valBtn);
         final Spinner param=(Spinner)v.findViewById(R.id.spinner);
         final Spinner debut=(Spinner)v.findViewById(R.id.spinner2);
         final Spinner fin=(Spinner)v.findViewById(R.id.spinner3);
@@ -47,9 +48,9 @@ public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener 
             public void onClick(View view) {
                     btnMom.setBootstrapType("default");
                     btnChi.setBootstrapType("success");
-                    G.fillSpinner(param,new ArrayList(Arrays.asList("item1","item2","item3")),contexte);
-                    G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
-                    G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
+                    G.fillSpinner(param,new ArrayList(Arrays.asList("Tall","weight","....")),contexte);
+                    G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
+                    G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
             }
         });
         btnMom.setOnClickListener(new View.OnClickListener() {
@@ -57,25 +58,14 @@ public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener 
             public void onClick(View view) {
                 btnChi.setBootstrapType("default");
                 btnMom.setBootstrapType("success");
-                G.fillSpinner(param,new ArrayList(Arrays.asList("item1","item2","item3")),contexte);
-                G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
-                G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
+                G.fillSpinner(param,new ArrayList(Arrays.asList("Tall","weight","...")),contexte);
+                G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
+                G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
             }
         });
         /*
                ************ Chart ***************
          */
-        tvX = (TextView) v.findViewById(R.id.tvXMax);
-        tvY = (TextView) v.findViewById(R.id.tvYMax);
-
-        mSeekBarX = (SeekBar) v.findViewById(R.id.seekBar1);
-        mSeekBarY = (SeekBar) v.findViewById(R.id.seekBar2);
-
-        mSeekBarX.setProgress(45);
-        mSeekBarY.setProgress(100);
-
-        mSeekBarY.setOnSeekBarChangeListener(this);
-        mSeekBarX.setOnSeekBarChangeListener(this);
 
         mChart = (LineChart) v.findViewById(R.id.chart1);
         // if enabled, the chart will always start at zero on the y-axis
@@ -118,54 +108,36 @@ public class Stats1 extends Fragment implements SeekBar.OnSeekBarChangeListener 
       //  y.setTypeface(tf);
         y.setLabelCount(5);
 
-        // add data
-        setData(36, 100);
 
-        mChart.animateXY(2000, 2000);
 
-        // dont forget to refresh the drawing
-        mChart.invalidate();
+        // dont forget to refresh the
+        btnLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 //  mChart.invalidate();
+                // add data
+                setData(36, 100);
+                mChart.animateXY(2000, 2000);
+            }
+        });
+
 
         /**********************************************************************************************/
 
         return v;
     }
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-        tvX.setText("" + (mSeekBarX.getProgress() + 1));
-        tvY.setText("" + (mSeekBarY.getProgress()));
-
-        setData(mSeekBarX.getProgress() + 1, mSeekBarY.getProgress());
-
-        // redraw
-        mChart.invalidate();
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-        // TODO Auto-generated method stub
-
-    }
-
     private void setData(int count, float range) {
 
         ArrayList<String> xVals = new ArrayList<String>();
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < 36; i++) {
             xVals.add((i) + "");
         }
 
         ArrayList<Entry> vals1 = new ArrayList<Entry>();
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < 36; i++) {
             float mult = (range + 1);
-            float val = (float) (Math.random() * mult) + 20;// + (float)
+            float val = (float) (i+10*Math.random()-10*Math.random()) + 20;// + (float)
             // ((mult *
             // 0.1) / 10);
             vals1.add(new Entry(val, i));

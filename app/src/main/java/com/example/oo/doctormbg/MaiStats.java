@@ -12,6 +12,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class MaiStats extends FragmentActivity implements ActionBar.TabListener {
 
@@ -24,7 +26,6 @@ public class MaiStats extends FragmentActivity implements ActionBar.TabListener 
         final ActionBar actionBar=getActionBar();
         if (actionBar != null) {
             actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2962FF")));
-
         }
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         addTabs(actionBar);
