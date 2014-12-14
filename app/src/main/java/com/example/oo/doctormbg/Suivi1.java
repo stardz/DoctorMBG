@@ -26,20 +26,20 @@ public class Suivi1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.suivi1,container,false);
         TextView tv = (TextView) v.findViewById(R.id.textView_info);
-        tv.setText( "Nom : "+"Belkadi\n"+
-                    "Prenom : "+" Zohra\n"+
-                    "Date de naissance : "+"12/11/1979\n"+
-                    "NSS : "+"1565152757\n"+
-                    "date debut : "+"15/11/2014");
+        tv.setText( "Last Name : "+"Belkadi\n"+
+                    "First Name : "+" Zohra\n"+
+                    "Birth Date : "+"12/11/1979\n"+
+                    "ID : "+"1565152757\n"+
+                    "Begin Date : "+"15/11/2014");
         ListView lv = (ListView) v.findViewById(R.id.discussion);
         ArrayList<MyListItem> list = new ArrayList<MyListItem>();
-        list.add(new MyListItem(1,"Belkadi Zohra","pourquoi .............. ........................... ......... v v vv v v v .................. ......... ......... .................. ......... ......... ",R.drawable.ic_user));
-        list.add(new MyListItem(2,"Belkadi Zohra","pourquoi ......... ",R.drawable.ic_user));
-        list.add(new MyListItem(3,"Dr. Hawas Salah","il faut  ......... ",R.drawable.ic_user));
+        list.add(new MyListItem(1,"Belkadi Zohra","why is it so .............. ........................... ......... v v vv v v v .................. ......... ......... .................. ......... ......... ",R.drawable.ic_user));
+        list.add(new MyListItem(2,"Belkadi Zohra","How can I ......... ",R.drawable.ic_user));
+        list.add(new MyListItem(3,"Dr. Hawas Salah","you have to  ......... ",R.drawable.ic_user));
         Log.d("debugging", list.toString());
         final MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(getActivity(), list);
         lv.setAdapter(adapter);
-        adapter.add(new MyListItem(3,"Dr. Hawas Salah","il faut  ......... ",R.drawable.ic_user));
+        adapter.add(new MyListItem(3,"Dr. Hawas Salah","or you can  ......... ",R.drawable.ic_user));
         return v;
     }
 }
