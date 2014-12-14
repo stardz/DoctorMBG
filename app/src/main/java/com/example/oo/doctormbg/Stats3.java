@@ -53,14 +53,14 @@ public class Stats3 extends Fragment implements  OnChartValueSelectedListener {
         final Spinner param1=(Spinner)v.findViewById(R.id.spinner);
         final Spinner param2=(Spinner)v.findViewById(R.id.spinner2);
         final Activity contexte=getActivity();
-        G.fillSpinner(param1,new ArrayList(Arrays.asList("Tall", "Weight", "...")),contexte);
+        G.fillSpinner(param1,new ArrayList(Arrays.asList("height", "Weight", "...")),contexte);
         G.fillSpinner(param2,new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6")),contexte);
         btnChi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnMom.setBootstrapType("default");
                 btnChi.setBootstrapType("success");
-                G.fillSpinner(param1,new ArrayList(Arrays.asList("Tall", "Weight", "...")),contexte);
+                G.fillSpinner(param1,new ArrayList(Arrays.asList("height", "Weight", "...")),contexte);
                 G.fillSpinner(param2,new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6")),contexte);
             }
         });
@@ -69,7 +69,7 @@ public class Stats3 extends Fragment implements  OnChartValueSelectedListener {
             public void onClick(View view) {
                 btnChi.setBootstrapType("default");
                 btnMom.setBootstrapType("success");
-                G.fillSpinner(param1,new ArrayList(Arrays.asList("Tall", "Weight","CHL", "...")),contexte);
+                G.fillSpinner(param1,new ArrayList(Arrays.asList("height", "Weight","CHL", "...")),contexte);
                 G.fillSpinner(param2,new ArrayList(Arrays.asList("1", "2", "3", "4", "5", "6")),contexte);
             }
         });

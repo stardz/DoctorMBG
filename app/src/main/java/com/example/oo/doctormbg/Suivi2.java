@@ -38,10 +38,8 @@ public class Suivi2 extends Fragment {
         final Spinner param=(Spinner)v.findViewById(R.id.spinner);
         final ArrayList<String> list = new ArrayList<String>();
         list.add("CHL");
-        list.add("SQL");
-        list.add("PGC");
         list.add("Weight");
-        list.add("Tall");
+        list.add("Height");
         list.add("...");
         G.fillSpinner(param, list, getActivity());
         final Activity contexte=getActivity();

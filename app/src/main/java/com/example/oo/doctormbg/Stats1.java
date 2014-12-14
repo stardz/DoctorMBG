@@ -40,7 +40,7 @@ public class Stats1 extends Fragment /*implements SeekBar.OnSeekBarChangeListene
         final Spinner debut=(Spinner)v.findViewById(R.id.spinner2);
         final Spinner fin=(Spinner)v.findViewById(R.id.spinner3);
         final Activity contexte=getActivity();
-        G.fillSpinner(param,new ArrayList(Arrays.asList("item1","item2","item3")),contexte);
+        G.fillSpinner(param,new ArrayList(Arrays.asList("height","weight","....")),contexte);
         G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
         G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","7")),contexte);
         btnChi.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +48,7 @@ public class Stats1 extends Fragment /*implements SeekBar.OnSeekBarChangeListene
             public void onClick(View view) {
                     btnMom.setBootstrapType("default");
                     btnChi.setBootstrapType("success");
-                    G.fillSpinner(param,new ArrayList(Arrays.asList("Tall","weight","....")),contexte);
+                    G.fillSpinner(param,new ArrayList(Arrays.asList("height","weight","....")),contexte);
                     G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
                     G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
             }
@@ -58,7 +58,7 @@ public class Stats1 extends Fragment /*implements SeekBar.OnSeekBarChangeListene
             public void onClick(View view) {
                 btnChi.setBootstrapType("default");
                 btnMom.setBootstrapType("success");
-                G.fillSpinner(param,new ArrayList(Arrays.asList("Tall","weight","...")),contexte);
+                G.fillSpinner(param,new ArrayList(Arrays.asList("height","weight","...")),contexte);
                 G.fillSpinner(debut,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
                 G.fillSpinner(fin,new ArrayList(Arrays.asList("1","2","3","4","5","6","...")),contexte);
             }

@@ -42,15 +42,15 @@ public class Stats2 extends Fragment implements OnChartValueSelectedListener {
         final Spinner param=(Spinner)v.findViewById(R.id.spinner);
         final Spinner debut=(Spinner)v.findViewById(R.id.spinner2);
         final Activity contexte=getActivity();
-        G.fillSpinner(param,new ArrayList(Arrays.asList("item1", "item2", "item3","...")),contexte);
-        G.fillSpinner(debut,new ArrayList(Arrays.asList("item1", "item2", "item3","...")),contexte);
+        G.fillSpinner(param,new ArrayList(Arrays.asList("height", "Weight", "item3","...")),contexte);
+        G.fillSpinner(debut,new ArrayList(Arrays.asList("height", "Weight", "item3","...")),contexte);
         btnChi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnMom.setBootstrapType("default");
                 btnChi.setBootstrapType("success");
-                G.fillSpinner(param,new ArrayList(Arrays.asList("Tall", "Weight", "item3","...")),contexte);
-                G.fillSpinner(debut,new ArrayList(Arrays.asList("Tall", "Weight", "item3","...")),contexte);
+                G.fillSpinner(param,new ArrayList(Arrays.asList("height", "Weight", "item3","...")),contexte);
+                G.fillSpinner(debut,new ArrayList(Arrays.asList("height", "Weight", "item3","...")),contexte);
             }
         });
         btnMom.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +58,8 @@ public class Stats2 extends Fragment implements OnChartValueSelectedListener {
             public void onClick(View view) {
                 btnChi.setBootstrapType("default");
                 btnMom.setBootstrapType("success");
-                G.fillSpinner(param,new ArrayList(Arrays.asList("Tall", "Weight", "blood sugar","...")),contexte);
-                G.fillSpinner(debut,new ArrayList(Arrays.asList("Tall", "Weight", "blood sugar","...")),contexte);
+                G.fillSpinner(param,new ArrayList(Arrays.asList("height", "Weight", "blood sugar","...")),contexte);
+                G.fillSpinner(debut,new ArrayList(Arrays.asList("height", "Weight", "blood sugar","...")),contexte);
             }
         });
         /*
