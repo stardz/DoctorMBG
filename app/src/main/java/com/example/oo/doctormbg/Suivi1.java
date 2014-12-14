@@ -1,5 +1,6 @@
 package com.example.oo.doctormbg;
 
+import android.app.LauncherActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.*;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -21,40 +23,96 @@ import java.util.List;
 /**
  * Created by Vivz on 10/25/13.
  */
+
 public class Suivi1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.suivi1,container,false);
-        TextView tv = (TextView) v.findViewById(R.id.textView_info);
+        final TextView tv = (TextView) v.findViewById(R.id.textView_info);
         tv.setText( "Last Name : "+"Belkadi\n"+
                     "First Name : "+" Zohra\n"+
                     "Birth Date : "+"12/11/1979\n"+
                     "ID : "+"1565152757\n"+
                     "Begin Date : "+"15/11/2014");
-        ListView lv = (ListView) v.findViewById(R.id.discussion);
-        ArrayList<MyListItem> list = new ArrayList<MyListItem>();
-        list.add(new MyListItem(1,"Belkadi Zohra","why is it so .............. ........................... ......... v v vv v v v .................. ......... ......... .................. ......... ......... ",R.drawable.ic_user));
-        list.add(new MyListItem(2,"Belkadi Zohra","How can I ......... ",R.drawable.ic_user));
-        list.add(new MyListItem(3,"Dr. Hawas Salah","you have to  ......... ",R.drawable.ic_user));
+        final ListView lv = (ListView) v.findViewById(R.id.discussion);
+        final ArrayList<MyListItem> list = new ArrayList<MyListItem>();
+        LauncherActivity.ListItem l1 = new LauncherActivity.ListItem();
+
+        list.add(new MyListItem("Belkadi Zohra",R.drawable.ic_user,tv));
+        list.add(new MyListItem("Hadji Samira",R.drawable.ic_user,tv));
+        list.add(new MyListItem("NAME",R.drawable.ic_user,tv));
+        list.add(new MyListItem("NAME",R.drawable.ic_user,tv));
+        list.add(new MyListItem("NAME",R.drawable.ic_user,tv));
+        list.add(new MyListItem("NAME",R.drawable.ic_user,tv));
+        list.add(new MyListItem("NAME",R.drawable.ic_user,tv));
+
         Log.d("debugging", list.toString());
         final MySimpleArrayAdapter adapter = new MySimpleArrayAdapter(getActivity(), list);
         lv.setAdapter(adapter);
-        adapter.add(new MyListItem(3,"Dr. Hawas Salah","or you can  ......... ",R.drawable.ic_user));
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                // ListView Clicked item index
+                int itemPosition= position;
+
+                // Show Alert
+                /*Toast.makeText(getApplicationContext(),
+                        "Position :"+itemPosition+"  ListItem : " +itemValue , Toast.LENGTH_LONG)
+                        .show();*/
+                switch(itemPosition) {
+                    case 0:
+                        tv.setText( "Last Name : "+"Belkadi\n"+
+                                "First Name : "+" Zohra\n"+
+                                "Birth Date : "+"12/11/1979\n"+
+                                "ID : "+"1565152757\n"+
+                                "Begin Date : "+"15/11/2014");
+                        break;
+                    case 1:
+                        tv.setText( "Last Name : "+"Hadji\n"+
+                                "First Name : "+" Zohra\n"+
+                                "Birth Date : "+"10/01/1977\n"+
+                                "ID : "+"1565465456457\n"+
+                                "Begin Date : "+"16/10/2014");
+                        break;
+                    case 2:
+                        tv.setText( "Last Name : "+"name\n"+
+                                "First Name : "+" name\n"+
+                                "Birth Date : "+"12/11/1979\n"+
+                                "ID : "+"1565152757\n"+
+                                "Begin Date : "+"15/11/2014");
+                        break;
+                    default:
+                        tv.setText( "Last Name : "+"name\n"+
+                                "First Name : "+" name\n"+
+                                "Birth Date : "+"12/11/1979\n"+
+                                "ID : "+"1565152757\n"+
+                                "Begin Date : "+"15/11/2014");
+                        break;
+                }
+
+            }
+
+        });
+
+
+
         return v;
     }
 }
 
 class MyListItem {
-    int id;
-    String name;
     String text;
     int drawable;
+    TextView tv;
 
-    public MyListItem(int id, String name, String text, int drawable) {
-        this.id = id;
-        this.name = name;
+    public MyListItem(String text, int drawable, TextView tv) {
         this.text = text;
         this.drawable=drawable;
+        this.tv = tv;
     }
 }
 
@@ -74,10 +132,8 @@ class MyListItem {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.element_disscusion, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.firstLine);
-        TextView textView2 = (TextView) rowView.findViewById(R.id.secondLine);
+        TextView textView2 = (TextView) rowView.findViewById(R.id.line);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-        textView.setText(values.get(position).name);
         textView2.setText(values.get(position).text);
         imageView.setImageResource(values.get(position).drawable);
         Log.d("debugging", position + "  " );
